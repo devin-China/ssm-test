@@ -6,6 +6,9 @@
     <select id="findUser" parameterType="long" resultType="user">
         select * from sys_user where id=#{id}
     </select>
+    <update id="changeName" parameterType="string">
+        UPDATE sys_user set username=#{username} where id=2
+    </update>
 
 </mapper>
 

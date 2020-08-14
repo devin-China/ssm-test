@@ -6,4 +6,5 @@ import org.apache.ibatis.annotations.Select;
 public interface UserMapper {
 //    @Select("select * from sys_user where id=#{id}")
     User findUser(Long id);
+    void changeName(String username);
 }
