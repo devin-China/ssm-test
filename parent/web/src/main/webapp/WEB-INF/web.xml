@@ -4,10 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+
     <!--load spring config xml-->
     <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:applicationContext*.xml</param-value>
+        <param-name>contextInitializerClasses</param-name>
+        <param-value>com.devin.web.ApplictionConfig</param-value>
     </context-param>
     <!--listener-->
     <listener>
@@ -32,8 +33,8 @@
         <servlet-name>dispatcherServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
-            <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:spring-mvc.xml</param-value>
+            <param-name>contextInitializerClasses</param-name>
+            <param-value>com.devin.web.ConfigController</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
